@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="bean3" class="org.example.beans.instantiation.Bean3" factory-method="getInstance">
+        <constructor-arg name="name" value="bean-3"/>
+    </bean>
+
+    <bean id="beanFactory" class="org.example.beans.instantiation.BeanFactory1"/>
+
+    <bean id="bean4" factory-bean="beanFactory" factory-method="getBean4"/>
+</beans>

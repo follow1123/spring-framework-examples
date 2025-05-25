@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="bean5" class="org.example.beans.dependency.Bean5"/>
+    <bean id="bean6" class="org.example.beans.dependency.Bean6"/>
+
+    <bean id="bean7" class="org.example.beans.dependency.constructor.Bean7">
+        <constructor-arg ref="bean5"/>
+        <constructor-arg ref="bean6"/>
+    </bean>
+
+    <bean id="bean8" class="org.example.beans.dependency.constructor.Bean8">
+        <constructor-arg index="0" value="bean-8"/>
+        <constructor-arg index="1" value="18"/>
+        <constructor-arg index="2" ref="bean7"/>
+    </bean>
+</beans>

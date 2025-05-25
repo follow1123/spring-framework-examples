@@ -1,15 +1,16 @@
-package org.example.entities;
+package org.example.beans.dependency;
 
-public class Item {
+public class Bean6 {
+
     public String name;
 
-    public Item(String name) {
-        this.name = name;
+    public Bean6() {
+        this.name = "bean-6";
     }
 
     @Override
     public String toString() {
-        return "Item{" +
+        return "Bean6{" +
                 "name='" + name + '\'' +
                 '}';
     }

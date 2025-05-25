@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="bean5" class="org.example.beans.dependency.Bean5"/>
+
+    <bean id="bean9" class="org.example.beans.dependency.setter.Bean9">
+        <property name="bean5" ref="bean5"/>
+        <property name="name" value="bean-9"/>
+    </bean>
+
+</beans>

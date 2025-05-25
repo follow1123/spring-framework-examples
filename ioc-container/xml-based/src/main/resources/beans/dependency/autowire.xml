@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="bean5" class="org.example.beans.dependency.Bean5"/>
+    <bean id="bean6" class="org.example.beans.dependency.Bean6"/>
+
+    <bean id="bean13" class="org.example.beans.dependency.autowire.Bean13" autowire="byName"/>
+    <bean id="bean14" class="org.example.beans.dependency.autowire.Bean14" autowire="byType"/>
+    <bean id="bean15" class="org.example.beans.dependency.autowire.Bean15" autowire="constructor"/>
+
+</beans>
